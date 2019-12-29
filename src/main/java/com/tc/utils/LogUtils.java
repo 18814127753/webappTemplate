@@ -18,4 +18,28 @@ public class LogUtils {
 		logger.warn("warn哈哈哈");
 		logger.error("error哈哈哈");
 	}
+	
+	
+	public static void info(String msg) {
+		logger.info(msg);
+	}
+	
+	public static void error(String msg) {
+		logger.error(msg);
+	}
+	public static void error(String msg,Throwable e) {
+		logger.error(msg,e);
+	}
+	public static void debug(String msg) {
+		logger.debug(msg);
+	}
+	public static void debug(String msg,Throwable e) {
+		logger.debug(msg,e);
+	}
+	public static void warn(String msg) {
+		logger.debug(msg);
+	}
+	public static void warn(String msg,Throwable e) {
+		logger.debug(msg,e);
+	}
 }

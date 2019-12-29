@@ -44,7 +44,46 @@
         <!-- Javascript -->
 
         <script src="js/jquery.js"></script>
+        <style>
+.lyear-wrapper {
+    position: fixed;
+    left:600px;
+}
+.lyear-login {
+    display: flex !important;
+    min-height: 100vh;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.login-center {
+    background: #fff;
+    min-width: 38.25rem;
+    padding: 2.14286em 3.57143em;
+    border-radius: 5px;
+    margin: 2.85714em 0;
+}
+.login-header {
+    margin-bottom: 1.5rem !important;
+}
+.login-center .has-feedback.feedback-left .form-control {
+    padding-left: 38px;
+    padding-right: 12px;
+}
+.login-center .has-feedback.feedback-left .form-control-feedback {
+    left: 0;
+    right: auto;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    z-index: 4;
+    color: #dcdcdc;
+}
+.login-center .has-feedback.feedback-left.row .form-control-feedback {
+    left: 15px;
+}
+</style>
     </head>
+    
     <body>
     	
         <div class="preloader">
@@ -66,14 +105,6 @@
                     </div>
                 </li>
                 <!-- Hero -->
-                <li class="layer" data-depth="0.20">
-<!--                     <div class="title"> -->
-<!--                         <h2 class="sub-title"> -->
-<!--                         	距离下班还有 -->
-<!--                         </h2> -->
-<!--                         <span class="line"></span> -->
-<!--                     </div> -->
-                </li>
 
                 <li class="layer" data-depth="0.25">
                     <div class="sphere">
@@ -143,40 +174,41 @@
                         <img alt="flake" src="images/flakes/depth5/flakes.png">
                     </div>
                     
-                    <form action="" class="form-horizontal" role="form" style="position:absolute;background-color:#FFFFFF;top:400px;left:800px;">
-						<div class="form-group">
-<!-- 							<label for="firstname" class="col-sm-2 control-label">用户名</label> -->
-							<div class="col-sm-10" style="position:relative;top:10px;">
-								<input type="text" class="form-control" id="firstname" 
-									   placeholder="请输入用户名">
-							</div>
-						</div>
-						<div class="form-group">
-<!-- 							<label for="lastname" class="col-sm-2 control-label">密码</label> -->
-							<div class="col-sm-10">
-								<input type="text" class="form-control" id="lastname" 
-									   placeholder="请输入密码">
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-2 col-sm-10" >
-								<button type="submit" class="btn btn-default" style="border-color:#AAAAAA">登录</button>
-							</div>
-						</div>
-					</form>
-<!--                     <div class="hero" style="position:absolute;background-color:#b0c4de; height:200px;left:800px;"> -->
-<!-- 					  <form> -->
-<!-- 					    <div class="form-group"> -->
-<!-- 					      <label for="usr">用户名:</label> -->
-<!-- 					     <input type="text" class="" id="usr"> -->
-<!-- 					    </div> -->
-<!-- 					    <div class="form-group"> -->
-<!-- 					      <label for="pwd">密码:</label> -->
-<!-- 					      <input type="password" class="" id="pwd"> -->
-<!-- 					    </div> -->
-<!-- 					    <button type="button" class="btn btn-light">登陆</button> -->
-<!-- 					  </form> -->
-<!-- 					</div> -->
+                    <div class="row lyear-wrapper">
+					  <div class="lyear-login">
+					    <div class="login-center">
+					      <div class="login-header text-center">
+					        <a href="index.html"> <img alt="light year admin" src="images/logo-sidebar.png"> </a>
+					      </div>
+					      <form action="#!" method="post">
+					        <div class="form-group has-feedback feedback-left">
+					          <input type="text" placeholder="请输入您的用户名" class="form-control" name="username" id="username" />
+					          <span class="mdi mdi-account form-control-feedback" aria-hidden="true"></span>
+					        </div>
+					        <div class="form-group has-feedback feedback-left">
+					          <input type="password" placeholder="请输入密码" class="form-control" id="password" name="password" />
+					          <span class="mdi mdi-lock form-control-feedback" aria-hidden="true"></span>
+					        </div>
+					        <div class="form-group has-feedback feedback-left row">
+					          <div class="col-xs-7">
+					            <input type="text" name="captcha" class="form-control" placeholder="验证码">
+					            <span class="mdi mdi-check-all form-control-feedback" aria-hidden="true"></span>
+					          </div>
+					          <div class="col-xs-5">
+					            <img src="images/captcha.png" class="pull-right" id="captcha" style="cursor: pointer;" onclick="this.src=this.src+'?d='+Math.random();" title="点击刷新" alt="captcha">
+					          </div>
+					        </div>
+					        <div class="form-group">
+					          <button class="btn btn-block btn-primary" type="button" onclick="location.href='index.html'">立即登录</button>
+					        </div>
+					      </form>
+					      <hr>
+<!-- 					      <footer class="col-sm-12 text-center"> -->
+<!-- 					        <p class="m-b-0">Copyright © 2019 <a href="http://lyear.itshubao.com">IT书包</a>. All right reserved</p> -->
+<!-- 					      </footer> -->
+					    </div>
+					  </div>
+					</div>
                 </li>
                 <!-- Contact -->
 
